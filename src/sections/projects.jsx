@@ -230,30 +230,7 @@ function Projects() {
                 </div>
             </motion.div>
 
-            {/* Background Decorative Elements */}
-            <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                {[...Array(15)].map((_, i) => (
-                    <motion.div
-                        key={i}
-                        className="absolute w-2 h-2 bg-green-500/20 rounded-full"
-                        initial={{ 
-                            x: Math.random() * window.innerWidth, 
-                            y: Math.random() * window.innerHeight,
-                            opacity: 0 
-                        }}
-                        animate={{ 
-                            y: [null, -100],
-                            opacity: [0, 1, 0]
-                        }}
-                        transition={{ 
-                            duration: 4,
-                            repeat: Infinity,
-                            delay: i * 0.3,
-                            ease: "easeOut"
-                        }}
-                    />
-                ))}
-</div>
+          
 
             {/* Call to Action */}
             <motion.div
