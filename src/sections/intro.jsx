@@ -1,7 +1,9 @@
 import Navbar from "../components/navbar"
 import { useEffect, useState } from "react";
 import { motion } from "motion/react";
-
+import code from "../assets/images/code.png";
+import LeetCodeStats from "../components/leetcode-stats";
+import Reviews from "../components/reviews";
 function Intro()
 {
     const [name, setName] = useState(['l','a','e','h','b','e','n','P','r']);
@@ -10,6 +12,17 @@ function Intro()
     const[j,setJ]=useState(0);
     const [key,setKey]=useState(null);
     const [sortingProgress, setSortingProgress] = useState(0);
+	// Tech logos for marquee strip
+	const techLogos = [
+		{ name: 'HTML5', src: 'https://cdn.simpleicons.org/html5/E34F26' },
+		{ name: 'CSS3', src: 'https://cdn.simpleicons.org/css3/1572B6' },
+		{ name: 'JavaScript', src: 'https://cdn.simpleicons.org/javascript/F7DF1E' },
+		{ name: 'React', src: 'https://cdn.simpleicons.org/react/61DAFB' },
+		{ name: 'Tailwind CSS', src: 'https://cdn.simpleicons.org/tailwindcss/38B2AC' },
+		{ name: 'Node.js', src: 'https://cdn.simpleicons.org/nodedotjs/339933' },
+		{ name: 'Firebase', src: 'https://cdn.simpleicons.org/firebase/FFCA28' },
+		{ name: 'Git', src: 'https://cdn.simpleicons.org/git/F05032' }
+	];
    
 
     // Function to determine color for each character based on insertion sort algorithm
@@ -60,10 +73,11 @@ function Intro()
   
     return(
     <div className="flex flex-col bg-gradient-to-br from-gray-900 via-black to-gray-800 min-h-screen">
-    <br></br>
+    
     <Navbar></Navbar>
-    <br></br>
-    <div className="w-full max-w-4xl mx-auto px-6 mt-[100px]">
+    {/* <br></br> */}
+    {/* <div className="flex "> */}
+    <div className="w-full max-w-4xl mx-auto px-6 mt-[20px]">
     <motion.p 
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
@@ -95,7 +109,10 @@ function Intro()
             ))}
         </span>!
     </motion.p>
-    <br></br>
+    
+    <code></code>
+    <div ><img src={code} alt="Code description" className="absolute right-60 top-36"></img></div>
+    {/* <br></br> */}
     
     {/* Beautiful Loading Bar */}
     <motion.div 
@@ -152,7 +169,28 @@ function Intro()
         purposeful development — building real-world solutions and speaking up <br></br>
         through code, creativity, and conversation.
     </motion.p>
-    </div>
+
+	{/* Moving tech logos strip */}
+	<div className="mt-10">
+		<div className="marquee py-4 bg-black/30 border-y border-white/10">
+			
+			<div className="marquee__track">
+				{techLogos.concat(techLogos).map((logo, idx) => (
+					<div key={idx} className="marquee__item">
+						<img
+							src={logo.src}
+							alt={logo.name}
+							className="h-10 w-auto drop-shadow-[0_0_8px_rgba(255,255,255,0.15)]"
+						/>
+					</div>
+				))}
+			</div>
+		</div>
+	</div>
+
+	{/* LeetCode Stats and Reviews Section */}
+	
+	</div>
     <br></br>
     <motion.div 
         initial={{ opacity: 0, height: 0 }}

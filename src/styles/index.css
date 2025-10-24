@@ -35,6 +35,16 @@ html {
   }
 }
 
+/* Horizontal marquee for continuous scrolling logos */
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 @keyframes pulse-glow {
   0%, 100% {
     box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
@@ -68,6 +78,33 @@ html {
 .animate-gradient {
   background-size: 200% 200%;
   animation: gradient-shift 3s ease infinite;
+}
+
+/* Marquee utilities */
+.marquee {
+  position: relative;
+  overflow: hidden;
+}
+
+.marquee__track {
+  display: flex;
+  width: max-content; /* shrink to content to make translate seamless */
+  animation: marquee-scroll 22s linear infinite;
+}
+
+.marquee__item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  opacity: 0.9;
+  transition: opacity 200ms ease, transform 200ms ease;
+}
+
+.marquee__item:hover {
+  opacity: 1;
+  transform: scale(1.05);
 }
 
 /* Glass morphism effect */
