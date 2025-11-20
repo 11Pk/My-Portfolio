@@ -171,7 +171,7 @@ function Intro()
     </motion.p>
 
 	{/* Moving tech logos strip */}
-	<div className="mt-10">
+	{/* <div className="mt-10">
 		<div className="marquee py-4 bg-black/30 border-y border-white/10">
 			
 			<div className="marquee__track">
@@ -186,7 +186,7 @@ function Intro()
 				))}
 			</div>
 		</div>
-	</div>
+	</div> */}
 
 	{/* LeetCode Stats and Reviews Section */}
 	
