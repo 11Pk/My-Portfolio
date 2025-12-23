@@ -13,7 +13,7 @@ function App() {
     <Projects></Projects>
     
 		<LeetCodeStats />
-		<Reviews />
+		{/* <Reviews /> */}
 	
     </div>
   );
