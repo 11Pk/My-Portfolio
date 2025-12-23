@@ -2,6 +2,9 @@ import { motion } from "motion/react";
 import { useState } from "react";
 import readycle from "../assets/images/readcycle.png";
 import tictactoe from "../assets/images/TicTacToe.png";
+import doodlequest from "../assets/images/doodlequest.png";
+import portfolio from "../assets/images/portfolio.png";
+import retirewell from "../assets/images/retirewell.png";
 function Projects() {
     const projects = [
         {
@@ -26,30 +29,30 @@ function Projects() {
         },
         {
             id: 3,
-            title: "To-Do List App",
-            description: "A productivity-focused task management application with drag-and-drop functionality, categories, and deadline tracking.",
+            title: "DoodleQuest Website",
+            description: "An AI-powered play and learn platform where kids learn while doodling and enjoy personalized stories and quizzes.",
             technologies: ["React", "Node.js", "MongoDB", "Express"],
-            image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=500&h=300&fit=crop",
-            github: "#",
+            image: doodlequest,
+            github: "https://github.com/Vrinda2403/Doodle_Quest.git",
             live: "#",
             featured: true
         },
         {
             id: 4,
-            title: "Calculator App",
-            description: "A sleek and responsive calculator application with advanced mathematical functions and keyboard support.",
-            technologies: ["JavaScript", "CSS3", "HTML5"],
-            image: "https://images.unsplash.com/photo-1587145820266-a5951ee6f620?w=500&h=300&fit=crop",
+            title: "My Portfolio",
+            description: "This very portfolio website showcasing my skills, projects, and experience with modern animations and responsive design.",
+            technologies: ["React", "Tailwind CSS", "Framer Motion", "JavaScript"],
+            image: portfolio,
             github: "#",
             live: "#",
             featured: false
         },
         {
             id: 5,
-            title: "My Portfolio",
-            description: "This very portfolio website showcasing my skills, projects, and experience with modern animations and responsive design.",
-            technologies: ["React", "Tailwind CSS", "Framer Motion", "JavaScript"],
-            image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&h=300&fit=crop",
+            title: "RetireWell Website",
+            description: "A comprehensive after retirement platform offering personalized health advice,memory place and ehnacing social circle.",
+            technologies: ["React", "Tailwind CSS", "MongoDB", "Express.js","Node.js"],
+            image: retirewell,
             github: "#",
             live: "#",
             featured: true
