@@ -77,7 +77,7 @@ function Intro()
     <Navbar></Navbar>
     {/* <br></br> */}
     {/* <div className="flex "> */}
-    <div className="w-full max-w-4xl mx-auto px-6 mt-[20px]">
+    <div className="w-full max-w-4xl mx-auto px-6 mt-[100px]">
     <motion.p 
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
@@ -192,12 +192,12 @@ function Intro()
 	
 	</div>
     <br></br>
-    <motion.div 
+    {/* <motion.div 
         initial={{ opacity: 0, height: 0 }}
         animate={{ opacity: 1, height: "8rem" }}
         transition={{ duration: 1, delay: 1.2 }}
         className="bg-gradient-to-r from-orange-400 via-red-500 to-pink-500 h-32 shadow-2xl"
-    />
+    /> */}
     </div>)
 }
 
