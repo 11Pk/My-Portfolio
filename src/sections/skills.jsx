@@ -140,7 +140,7 @@ function Skills(){
     }, []);
 
     return(
-        <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-800 py-16">
+        <div id="skills" className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-800 py-16">
             <motion.div
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}

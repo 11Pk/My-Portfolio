@@ -1,20 +1,28 @@
-import Intro from "./sections/intro"
-import Skills from "./sections/skills"
-import Projects from"./sections/projects"
-import LeetCodeStats from "./components/leetcode-stats";
-import Reviews from "./components/reviews";
-// import Landing from "./sections/landing"
+import { useState } from "react";
+import Intro from "./sections/intro";
+import Journey from "./sections/journey";
+import Portfolio from "./sections/portfolio";
+
 function App() {
+  const [stage, setStage] = useState("search");
+
+  const advanceJourney = () => {
+    setStage((current) =>
+      current === "skills"
+        ? "projects"
+        : current === "projects"
+          ? "evidence"
+          : "portfolio",
+    );
+  };
+
   return (
     <div>
-      
-    <Intro></Intro>
-    <Skills></Skills>
-    <Projects></Projects>
-    
-		<LeetCodeStats />
-		{/* <Reviews /> */}
-	
+      {stage === "search" && <Intro onComplete={() => setStage("skills")} />}
+      {["skills", "projects", "evidence"].includes(stage) && (
+        <Journey stage={stage} onNext={advanceJourney} />
+      )}
+      {stage === "portfolio" && <Portfolio />}
     </div>
   );
 }

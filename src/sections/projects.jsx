@@ -1,12 +1,10 @@
 import { motion } from "motion/react";
-import { useState } from "react";
 import readycle from "../assets/images/readcycle.png";
 import tictactoe from "../assets/images/TicTacToe.png";
 import doodlequest from "../assets/images/doodlequest.png";
 import portfolio from "../assets/images/portfolio.png";
 import retirewell from "../assets/images/retirewell.png";
-function Projects() {
-    const projects = [
+export const projects = [
         {
             id: 1,
             title: "ReadCycle Website",
@@ -57,7 +55,9 @@ function Projects() {
             live: "#",
             featured: true
         }
-    ];
+];
+
+function Projects() {
 
     
 
@@ -187,7 +187,7 @@ function Projects() {
     );
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-800 py-16">
+        <div id="projects" className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-800 py-16">
             {/* Header */}
             <motion.div
                 initial={{ opacity: 0, y: 50 }}
