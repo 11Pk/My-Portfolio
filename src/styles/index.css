@@ -8,21 +8,41 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #1a1a1a;
+  background: #f4f5f1;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(45deg, #3b82f6, #8b5cf6);
+  background: #286c68;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(45deg, #2563eb, #7c3aed);
+  background: #bb4b2f;
 }
 
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
+}
+
+@media print {
+  header,
+  button,
+  a[href^="mailto:"],
+  a[href^="tel:"] {
+    display: none !important;
+  }
+
+  body,
+  #root,
+  #root > div {
+    background: #fff !important;
+    color: #182522 !important;
+  }
+
+  section {
+    break-inside: avoid;
+  }
 }
 
 /* Custom animations */
